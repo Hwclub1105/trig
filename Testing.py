@@ -1,5 +1,5 @@
-import tkinter as tk
-from tkinter import ttk
+import customtkinter as tk
+from customtkinter import ttk
 
 counter = 0
 

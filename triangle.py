@@ -1,3 +1,5 @@
+import matplotlib.pyplot as plt
+
 side1 = int(input('Enter side one: '))
 side2 = int(input('Enter side two: '))
 side3 = int(input('Enter side three: '))
@@ -20,4 +22,8 @@ else:
     if ((max([side1,side2,side3]))**2)*2 == sum([side1**2,side2**2,side3**2]):
         rightangled = 1
 print('The triangle is:\n' + scalene*' -Scalene\n' + isoceles*' -Isoceles\n' + equilateral*' -Equilateral\n' + rightangled*' -Rightangled')
-    
+
+x = [0,side1,((side2**2)-(side3**2)+(side1**2))/(2*side1),0]
+y = [0,0, (side2**2-(((side2**2)-(side3**2)+(side1**2))/(2*side1))**2)**0.5,0]
+plt.plot(x,y)
+plt.show()
